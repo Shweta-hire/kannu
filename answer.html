@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Do You Hate Me? 💔</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ffe6f0, #e0f7ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      overflow: hidden;
+      text-align: center;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #703c57;
+      margin-bottom: 3rem;
+      user-select: none;
+    }
+
+    .btn {
+      padding: 0.8rem 1.8rem;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      position: absolute;
+      user-select: none;
+      width: 120px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #yesBtn {
+      background-color: #ffb6c1;
+      color: #fff;
+      z-index: 10;
+      top: 50%;
+      left: 40%;
+      transform: translate(-50%, -50%);
+    }
+
+    #noBtn {
+      background-color: #9be7c4;
+      color: #333;
+      z-index: 5;
+      top: 50%;
+      left: 60%;
+      transform: translate(-50%, -50%);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    #noBtn:hover {
+      background-color: #6fd3a9;
+    }
+
+    .message {
+      font-size: 1rem;
+      color: #a25b76;
+      margin-top: 7rem;
+      position: relative;
+      z-index: 1;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Do you hate me? 😢</h1>
+
+  <button id="yesBtn" class="btn">Yes 💔</button>
+
+  <a href="thankyou.html" id="noBtn" class="btn">No 🥺</a>
+
+  <p class="message">I DARE YOU TO CLICK ON YES 😼</p>
+
+  <script>
+    const yesBtn = document.getElementById('yesBtn');
+
+    yesBtn.addEventListener("mouseenter", () => {
+      const btnWidth = yesBtn.offsetWidth;
+      const btnHeight = yesBtn.offsetHeight;
+
+      const padding = 20;
+      const maxX = window.innerWidth - btnWidth - padding;
+      const maxY = window.innerHeight - btnHeight - padding;
+
+      const randomX = Math.random() * maxX + padding;
+      const randomY = Math.random() * maxY + padding;
+
+      // Random rotation between -20deg and +20deg
+      const randomRotation = (Math.random() * 40) - 20;
+
+      yesBtn.style.left = randomX + "px";
+      yesBtn.style.top = randomY + "px";
+      yesBtn.style.transform = `translate(0, 0) rotate(${randomRotation}deg)`;
+    });
+
+    yesBtn.addEventListener('mousedown', e => e.preventDefault());
+  </script>
+
+</body>
+</html>

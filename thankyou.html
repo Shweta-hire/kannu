@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>You’re the Best! 💖🐻</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ffe9f1 0%, #ffdaf4 100%);
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: #7a3e58;
+      overflow-x: hidden;
+      padding: 2rem;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #a83279;
+      animation: glitter 3s linear infinite;
+      text-shadow:
+        0 0 5px #ff69b4,
+        0 0 10px #ff69b4,
+        0 0 20px #ff1493,
+        0 0 30px #c71585,
+        0 0 40px #ff1493,
+        0 0 50px #ff69b4;
+    }
+
+    p {
+      font-size: 1.5rem;
+      max-width: 500px;
+      text-align: center;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+      color: #8e4a6e;
+      letter-spacing: 0.05em;
+      filter: drop-shadow(0 1px 1px #ffa8d8);
+    }
+
+    .teddy-container {
+      max-width: 300px;
+      margin-bottom: 2rem;
+      animation: floatUpDown 6s ease-in-out infinite;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 30px;
+      box-shadow: 0 8px 30px rgba(168, 50, 120, 0.4);
+    }
+
+    a {
+      display: inline-block;
+      background: #a83279;
+      color: #fff;
+      padding: 1rem 2rem;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      text-decoration: none;
+      box-shadow: 0 5px 20px #c459a3aa;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #c459a3;
+      transform: scale(1.1);
+      box-shadow: 0 8px 30px #c459a3cc;
+    }
+
+    /* Floating sparkles */
+
+    .sparkle {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background: #f48fb1;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: sparkleMove 6s linear infinite;
+      box-shadow: 0 0 10px #f48fb1, 0 0 20px #f06292;
+    }
+    .sparkle::before,
+    .sparkle::after {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #f48fb1;
+      border-radius: 50%;
+      opacity: 0.8;
+      box-shadow: 0 0 10px #f48fb1, 0 0 20px #f06292;
+    }
+    .sparkle::before {
+      transform: translate(15px, -5px);
+    }
+    .sparkle::after {
+      transform: translate(-15px, 5px);
+    }
+
+    @keyframes sparkleMove {
+      0% { transform: translateY(110vh) translateX(0) scale(0.7); opacity: 0.8; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-10vh) translateX(30vw) scale(1); opacity: 0; }
+    }
+
+    @keyframes glitter {
+      0%, 100% {
+        text-shadow:
+          0 0 5px #ff69b4,
+          0 0 10px #ff69b4,
+          0 0 20px #ff1493,
+          0 0 30px #c71585,
+          0 0 40px #ff1493,
+          0 0 50px #ff69b4;
+      }
+      50% {
+        text-shadow:
+          0 0 10px #f8bbd0,
+          0 0 20px #f8bbd0,
+          0 0 30px #f48fb1,
+          0 0 40px #f06292,
+          0 0 50px #c2185b,
+          0 0 60px #f06292;
+      }
+    }
+
+    @keyframes floatUpDown {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-25px);
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>You’re the Best, Buddy! 💖🐻</h1>
+  <p>Thank you for being you.<br> You deserve all the best in the world, always.
+     sorry if i made you sad spoke too much been batmeez sory of that but thank you as well......i will pray for you becos your a nice human being and you deserve all happiness
+    take my message seriously if u want so ,obv thats ur call but im serious about this.You ended it so easily,but it was not  the same for me kannu......wish you all the best and yaaaa takeeeee careeeeeeeee
+bye bye forever!!</p>
+
+  <div class="teddy-container">
+    <img src="tkthao219-bubududu.gif" alt="Cute Teddy Bear Hugging" />
+  </div>
+
+  <a href="index.html">Back to Home 🏠</a>
+
+  <script>
+    // Generate floating sparkles randomly
+    for (let i = 0; i < 20; i++) {
+      const sparkle = document.createElement('div');
+      sparkle.classList.add('sparkle');
+      sparkle.style.left = Math.random() * 100 + 'vw';
+      sparkle.style.top = Math.random() * 100 + 'vh';
+      sparkle.style.animationDuration = (4 + Math.random() * 5) + 's';
+      sparkle.style.animationDelay = (Math.random() * 6) + 's';
+      document.body.appendChild(sparkle);
+    }
+  </script>
+
+</body>
+</html>
